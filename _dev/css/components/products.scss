@@ -51,7 +51,6 @@
   }
 }
 .radio-label {
-  @include box-shadow;
   background: white;
   display: inline-block;
   padding: 0.125rem $small-space;
@@ -182,7 +181,6 @@
   margin-bottom: 0;
 }
 .tabs {
-  @include box-shadow;
   margin-top: 2rem;
   background: white;
   padding: $medium-space $large-space;
@@ -215,7 +213,6 @@
   margin-bottom: $medium-space;
   position: relative;
   img {
-    @include box-shadow;
     background: white;
   }
   .layer {
@@ -415,7 +412,6 @@
   > li.thumb-container {
     display: inline;
     > .thumb {
-      @include box-shadow;
       cursor: pointer;
       margin-bottom: $small-space;
       .images-container & {
@@ -514,7 +510,6 @@
       background-color: white;
       width: auto;
       padding-right: 1.875rem;
-      @include box-shadow-light;
     }
     ul li {
       margin-right: $small-space;
@@ -546,7 +541,6 @@
     margin-top: $small-space;
     font-size: $base-font-size;
 
-    @include box-shadow-light;
     &.online-only {
       position: absolute;
       top: 25rem;
@@ -663,7 +657,6 @@
     margin-bottom: 0;
   }
   li {
-    @include box-shadow-light;
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;

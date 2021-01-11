@@ -150,14 +150,3 @@ $product-description-height: 70px;
     margin-bottom: 1.5rem;
   }
 }
-
-@include media-breakpoint-down(sm) {
-  #products,.featured-products,.product-accessories  {
-    .thumbnail-container {
-      @include box-shadow;
-      .product-description{
-        box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.2);
-      }
-    }
-  }
-}
