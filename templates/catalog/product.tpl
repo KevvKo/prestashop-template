@@ -51,7 +51,6 @@
 
   <section id="main" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="url" content="{$product.url}">
-
     <div class="row product-container">
       <div class="col-md-6">
         {block name='page_content_container'}
@@ -69,6 +68,7 @@
               {block name='product_cover_thumbnails'}
                 {include file='catalog/_partials/product-cover-thumbnails.tpl'}
               {/block}
+
               <div class="scroll-box-arrows">
                 <i class="material-icons left">&#xE314;</i>
                 <i class="material-icons right">&#xE315;</i>
@@ -82,6 +82,13 @@
           {block name='page_header_container'}
             {block name='page_header'}
               <h1 class="h1" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
+                <ul class="producttags">
+                  {foreach from=Tag::getProductTags(Tools::getValue('id_product')) key=k item=v}
+                      {foreach from=$v item=value}
+                          <li><a href="{$link->getPageLink('search', true, NULL, "tag={$value|urlencode}")}">{$value|escape:html:'UTF-8'}</a></li>
+                      {/foreach}
+                  {/foreach}
+                </ul>
             {/block}
           {/block}
           {block name='product_prices'}
@@ -89,6 +96,7 @@
           {/block}
 
           <div class="product-information">
+
             {block name='product_description_short'}
               <div id="product-description-short-{$product.id}" itemprop="description">{$product.description_short nofilter}</div>
             {/block}
@@ -100,6 +108,7 @@
             {/if}
 
             <div class="product-actions">
+
               {block name='product_buy'}
                 <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
                   <input type="hidden" name="token" value="{$static_token}">
@@ -226,7 +235,7 @@
                    {$extra.content nofilter}
                  </div>
                  {/foreach}
-              </div>  
+              </div>
             </div>
           {/block}
         </div>

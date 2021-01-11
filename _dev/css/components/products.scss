@@ -731,3 +731,37 @@
     }
   }
 }
+
+.producttags {
+  list-style:none;
+  position:relative;
+  clear:both;
+  display:block;
+  padding-bottom:20px;
+  margin-bottom:20px;
+}
+
+.producttags li, .producttags a{
+  float:left;
+  height:24px;
+  line-height:24px;
+  position:relative;
+  font-size: 15px;
+  }
+
+.producttags a{
+  margin-left:20px;
+  padding:0 10px 0 12px;
+  background: $brand-secondary;
+  color:#fff;
+  text-decoration:none;
+  -moz-border-radius:5px;
+  -webkit-borde-radius:5px;
+  border-radius:5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+}
+.producttags a:visited{
+  color:#fff;
+}
