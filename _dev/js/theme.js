@@ -54,6 +54,15 @@ for (var i in EventEmitter.prototype) {
 }
 
 $(document).ready(() => {
+
+  const cookieChecked = JSON.parse( localStorage.getItem('cookie-checked'))
+  console.log(cookieChecked)
+  if(!cookieChecked){
+    console.log("j")
+    const cookie = document.getElementById('cookie-banner')
+    cookie.style.height = '60px';
+  }
+
   let dropDownEl = $('.js-dropdown');
   const form = new Form();
   let topMenuEl = $('.js-top-menu ul[data-depth="0"]');
@@ -66,4 +75,13 @@ $(document).ready(() => {
   topMenu.init();
   productMinitature.init();
   productSelect.init();
+
+  const cookie = document.querySelector('#cookie-banner button')
+  cookie.addEventListener('click', () => {
+
+    const cookiebanner = document.getElementById('cookie-banner')
+    cookiebanner.style.height = '0';
+
+    localStorage.setItem('cookie-checked', true)
+  })
 });
