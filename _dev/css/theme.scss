@@ -268,7 +268,17 @@
   z-index: 5;
   display: flex;
   justify-content: center;
+  padding-top: 5px;
 
+  a{
+    text-decoration: underline;
+    color: $brand-secondary;
+  }
+
+  a:hover{
+    color: #004DD6;
+    text-decoration: underline;
+  }
 
   button{
     margin-top: 5px;

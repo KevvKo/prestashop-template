@@ -60,7 +60,7 @@ $(document).ready(() => {
   if(!cookieChecked){
     console.log("j")
     const cookie = document.getElementById('cookie-banner')
-    cookie.style.height = '60px';
+    cookie.style.height = '70px';
   }
 
   let dropDownEl = $('.js-dropdown');
