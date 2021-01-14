@@ -295,6 +295,18 @@
   }
 }
 
+
+@media only screen and (max-width: 1200px) {
+  #cookie-banner{
+
+  font-size: 11px;
+  }
+
+  button{
+    margin-top: 0 !important;
+    margin-bottom: 5px;
+  }
+}
 /*** MAIN ***/
 #main {
 
