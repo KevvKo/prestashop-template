@@ -891,6 +891,15 @@ for (var i in _events2['default'].prototype) {
 }
 
 $(document).ready(function () {
+
+  var cookieChecked = JSON.parse(localStorage.getItem('cookie-checked'));
+  console.log(cookieChecked);
+  if (!cookieChecked) {
+    console.log("j");
+    var _cookie = document.getElementById('cookie-banner');
+    _cookie.style.height = '70px';
+  }
+
   var dropDownEl = $('.js-dropdown');
   var form = new _componentsForm2['default']();
   var topMenuEl = $('.js-top-menu ul[data-depth="0"]');
@@ -903,6 +912,15 @@ $(document).ready(function () {
   topMenu.init();
   productMinitature.init();
   productSelect.init();
+
+  var cookie = document.querySelector('#cookie-banner button');
+  cookie.addEventListener('click', function () {
+
+    var cookiebanner = document.getElementById('cookie-banner');
+    cookiebanner.style.height = '0';
+
+    localStorage.setItem('cookie-checked', true);
+  });
 });
 
 /***/ }),

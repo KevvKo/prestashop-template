@@ -26,6 +26,20 @@
   <div class="header-banner">
     {hook h='displayBanner'}
   </div>
+  <div id="cookie-banner">
+    <div id="cookie-wrapper">
+      <div id="cookie-content">
+        {if $language.iso_code == 'en' }
+          With the use of the website you are agree our <a href="http://prestashopa.netglue.de/en/content/7-privacy-protection">privacy protection</a>.
+        {else}
+
+          Mit Benutzung der Website stimmen Sie den <a href="http://prestashopa.netglue.de/de/content/7-datenschutzerklaerung">Datenschutzbestimmungen</a> zu.
+
+        {/if}
+      </div>
+      <button>ok</button>
+    </div>
+  </div>
 {/block}
 
 {block name='header_nav'}
@@ -83,7 +97,7 @@
       </div>
     </div>
     <div id="category-bar" class="header-top-right header-right-wrapper col-lg-12 col-md-10 col-sm-12 position-static">
-      <div id="category-wrapper" class="col-lg-8 col-md-12 col-sm-12" >
+      <div id="category-wrapper" class="col-lg-11 col-md-10 col-sm-10" >
         {hook h='displayTop'}
         <div class="clearfix"></div>
       </div>
